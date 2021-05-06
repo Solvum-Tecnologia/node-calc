@@ -5,10 +5,6 @@ const base = require("./fixedValues");
 
 app.use(express.json());
 
-app.get("/", (request, response) => {
-  return response.json(base);
-});
-
 app.post("/", (request, response) => {
 
   const { optionOfRoom, underEleven, underSix, single, couple } = request.body;
@@ -43,5 +39,5 @@ app.post("/", (request, response) => {
 
 const port = process.env.PORT || 3333
 app.listen(port, () => {
-  console.log("Server running on port 3333");
+  console.log("Server running");
 });
